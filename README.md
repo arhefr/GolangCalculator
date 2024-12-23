@@ -90,4 +90,3 @@ ___
 > | 200 | {\"expression": "2+2*2"\} | {"result": 6} | ... |
 > | 422 | {\"expression": "2+2*"\} | {"error": "Expression is not valid"} | Неккоректный пример
 > | 500 | {\"aboba": "aboba"\} | {"error": "Internal server error"} | Неккоректный JSON или неизвестная ошибка
-
