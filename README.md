@@ -57,25 +57,28 @@ ___
 > + ```shell
 >   go run абсолютный путь до main.go
 >   ```
->
->## **Как отправлять POST запросы?**
->### **Требования к запросам:**
->+ Сервер принимает запросы по адресу:
->   ```shell
->   http://localhost:8080/api/v1/calculate
->   ```
->+ Поддерживает JSON следующего вида:
->   ```json
->   {
->       "expression": "EXAMPLE"    
->   }
->   ```
->### **Пример запроса:**
->```shell
->curl -X POST -H "Content-type:application/json" --data "{\"expression\":\"2+2*2\"}" http://localhost:8080/api/v1/calculate
->```
+>>[!WARNING]
+>>## **Как отправлять POST запросы?**
+>>### **Требования к запросам:**
+>>+ Сервер принимает запросы по адресу:
+>>   ```shell
+>>   http://localhost:8080/api/v1/calculate
+>>   ```
+>>+ Поддерживает JSON следующего вида:
+>>   ```json
+>>    {
+>>    "expression": "EXAMPLE"    
+>>    }
+>>   ```
+>>   ```shell
+>>   {\"expression\":\"EXAMPLE\"}
+>>   ```
+>>   
+>>### **Пример запроса:**
+>>```shell
+>>curl -X POST -H "Content-type:application/json" --data "{\"expression\":\"2+2*2\"}" http://localhost:8080/api/v1/calculate
+>>```
 
->[!IMPORTANT]
 ># **Примеры использования:**
 > Взависимости от запроса, сервер может вернуть следующий статус:
 >
