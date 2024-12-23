@@ -52,7 +52,7 @@ ___
 >[!IMPORTANT]
 >## **Как запустить сервер?**
 > + ```shell
->   go run ./cmd/main/main.go
+>   go run ./Calculator_Golang/cmd/main/main.go
 >   ```
 > + ```shell
 >   go run абсолютный путь до main.go
