@@ -63,7 +63,7 @@
 > | Статус | Запрос | Ответ сервера | Причина |
 > | ---- | --------- | ------ | ------ |
 > | **200** | `curl -X POST -H "Content-type:application/json" --data "{\"expression\":\"2+2\"}" http://localhost:8080/api/v1/calculate` | `{"result": 6}` | Корректный запрос |
-> | **405** | `curl localhost:8080?expression="2+2"` | `{"error": "Expression is not valid"}` | Неккоректный тип запроса
+> | **405** | `curl localhost:8080/api/v1/calculate?expression="2+2"` | `{"error": "Method is not allowed"}` | Неккоректный тип запроса
 > | **422** | `curl -X POST -H "Content-type:application/json" --data "{\"expression\":\"2+\"}" http://localhost:8080/api/v1/calculate` | `{"error": "Expression is not valid"}` | Неккоректное математическое выражение
 > | **500** | `curl -X POST -H "Content-type:application/json" --data "{\"2+2\": \"expression"}" http://localhost:8080/api/v1/calculate` | `{"error": "Internal server error"}` | Неккоректный JSON или неизвестная ошибка
 
