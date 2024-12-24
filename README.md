@@ -62,10 +62,10 @@
 >
 > | Статус | Запрос | Ответ сервера | Причина |
 > | ---- | --------- | ------ | ------ |
-> | **200** | `curl -X POST -H "Content-type:application/json" --data "{\"expression\":\"2+2\"}" http://localhost:8080/api/v1/calculate` | {"result": 6} | Корректный запрос |
-> | **405** | `curl localhost:8080?expression="2+2"` | {"error": "Expression is not valid"} | Неккоректный тип запроса
-> | **422** | `curl -X POST -H "Content-type:application/json" --data "{\"expression\":\"2+\"}" http://localhost:8080/api/v1/calculate` | {"error": "Expression is not valid"} | Неккоректное математическое выражение
-> | **500** | `{\"2+2\": \"expression"}` | {"error": "Internal server error"} | Неккоректный JSON или неизвестная ошибка
+> | **200** | `curl -X POST -H "Content-type:application/json" --data "{\"expression\":\"2+2\"}" http://localhost:8080/api/v1/calculate` | `{"result": 6}` | Корректный запрос |
+> | **405** | `curl localhost:8080?expression="2+2"` | `{"error": "Expression is not valid"}` | Неккоректный тип запроса
+> | **422** | `curl -X POST -H "Content-type:application/json" --data "{\"expression\":\"2+\"}" http://localhost:8080/api/v1/calculate` | `{"error": "Expression is not valid"}` | Неккоректное математическое выражение
+> | **500** | `{\"2+2\": \"expression"}` | `{"error": "Internal server error"}` | Неккоректный JSON или неизвестная ошибка
 
 # **Как работает калькулятор?**
 >[!TIP]
