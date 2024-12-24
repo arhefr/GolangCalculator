@@ -23,7 +23,7 @@
 >   cd calculator
 >   ```
 > + ```shell
->   go run cmd/main/main.go
+>   go run cmd/main.go
 >   ```
 > **Чтобы убедиться в том, что сервер запустился, можно воспользоваться следующим запросом:**
 >   ```shell
