@@ -21,13 +21,9 @@ func ParserExpression(expression string) ([]float64, []pkg.Operator, error) {
 		sym := string(sym)
 		token := pkg.Tokenize(sym)
 
-		// Считываем отрицательное число, если перед ним соответсвующий символ
-		if token == 2 || token == 4 {
-			allowMinus = I + 1
-		}
-
 		// Если оператор:
 		if (token == 0 || token == 1 || token == 2) && I != allowMinus {
+			allowMinus = I + 1
 			ops = append(ops, pkg.NewOperator(sym, len(ops), token+priority))
 
 			// Если число:
@@ -57,6 +53,7 @@ func ParserExpression(expression string) ([]float64, []pkg.Operator, error) {
 			}
 			// "(" -> приоритет операторов увеличивается
 		} else if token == 4 {
+			allowMinus = I + 1
 			if I != 0 {
 				prevToken := pkg.Tokenize(string(expression[I-1]))
 				if prevToken == 3 || prevToken == 5 {
