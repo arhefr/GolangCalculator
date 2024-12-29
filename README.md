@@ -55,7 +55,7 @@
 >## **Как запустить тесты?**
 > **Для калькулятора:**
 > + ```shell
->   cd calculator/calc
+>   cd calculator/pkg/calc
 >   ```
 > + ```shell
 >   go test -v -cover
