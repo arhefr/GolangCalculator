@@ -31,12 +31,9 @@
 
 >[!IMPORTANT]
 >## **Как запустить сервер?**
-> + ```shell
->   cd calculator
->   ```
-> + ```shell
->   go run cmd/main.go
->   ```
+> ```shell
+> go run calculator/cmd/main.go
+> ```
 
 > [!IMPORTANT]
 >## **Как отправлять POST запросы?**
